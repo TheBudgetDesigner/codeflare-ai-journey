@@ -2,41 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* CodeFlare Design System - Modern developer blog with dark-first aesthetic */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core colors - Light mode (fallback) */
+    --background: 220 13% 18%;
+    --foreground: 220 9% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 13% 16%;
+    --card-foreground: 220 9% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 13% 16%;
+    --popover-foreground: 220 9% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Purple/Blue gradient inspired */
+    --primary: 260 70% 55%;
+    --primary-foreground: 220 9% 98%;
+    --primary-glow: 280 80% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Complementary */
+    --secondary: 220 13% 22%;
+    --secondary-foreground: 220 9% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones */
+    --muted: 220 13% 20%;
+    --muted-foreground: 220 9% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Bright highlight */
+    --accent: 180 100% 50%;
+    --accent-foreground: 220 13% 18%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 9% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 25%;
+    --input: 220 13% 22%;
+    --ring: 260 70% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(260 70% 55%), hsl(280 80% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 13% 18%), hsl(220 13% 22%));
+    --gradient-accent: linear-gradient(135deg, hsl(180 100% 50%), hsl(200 100% 60%));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(260 70% 55% / 0.3);
+    --shadow-card: 0 8px 32px hsl(220 13% 10% / 0.4);
+    --shadow-elevated: 0 16px 64px hsl(220 13% 8% / 0.6);
+
+    /* Typography */
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
 
     --sidebar-background: 0 0% 98%;
 
@@ -55,34 +72,39 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  /* Light mode overrides (when toggled) */
+  .light {
+    --background: 220 9% 98%;
+    --foreground: 220 13% 18%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 9% 98%;
+    --card-foreground: 220 13% 18%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 9% 98%;
+    --popover-foreground: 220 13% 18%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 260 70% 55%;
+    --primary-foreground: 220 9% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 9% 95%;
+    --secondary-foreground: 220 13% 18%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 9% 96%;
+    --muted-foreground: 220 9% 45%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 180 100% 50%;
+    --accent-foreground: 220 9% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 9% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 9% 90%;
+    --input: 220 9% 95%;
+    --ring: 260 70% 55%;
+
+    --shadow-glow: 0 0 40px hsl(260 70% 55% / 0.2);
+    --shadow-card: 0 8px 32px hsl(220 13% 50% / 0.1);
+    --shadow-elevated: 0 16px 64px hsl(220 13% 50% / 0.15);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +122,81 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: radial-gradient(ellipse at top, hsl(var(--primary) / 0.05) 0%, transparent 50%);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Code styling */
+  code {
+    @apply bg-muted px-1.5 py-0.5 rounded-md text-sm font-mono;
+  }
+
+  pre code {
+    @apply bg-transparent p-0;
+  }
+}
+
+@layer components {
+  /* Hero gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glowing effect */
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Card with enhanced styling */
+  .card-enhanced {
+    @apply bg-card border border-border rounded-lg;
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(20px);
+  }
+
+  /* Button variants for CodeFlare */
+  .btn-hero {
+    @apply relative overflow-hidden;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Animated underline */
+  .link-animated {
+    @apply relative;
+  }
+
+  .link-animated::after {
+    content: '';
+    @apply absolute w-full h-0.5 bg-accent scale-x-0 bottom-0 left-0 origin-bottom-right transition-transform duration-300;
+  }
+
+  .link-animated:hover::after {
+    @apply scale-x-100 origin-bottom-left;
   }
 }
