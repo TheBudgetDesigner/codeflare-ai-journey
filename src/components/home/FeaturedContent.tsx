@@ -84,7 +84,7 @@ const FeaturedContent = () => {
               variants={cardVariants}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <Card className="card-enhanced hover:scale-105 transition-all duration-300 group cursor-pointer">
+              <Card className="glass-card hover:scale-105 transition-all duration-300 group cursor-pointer">
                 <Link to={card.link}>
                   <CardHeader className="pb-3">
                     <div className="flex items-center space-x-3 mb-2">

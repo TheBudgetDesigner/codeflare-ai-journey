@@ -87,7 +87,7 @@ const TipOfTheDay = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Card className="card-enhanced relative overflow-hidden">
+          <Card className="glass-card relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-primary opacity-5" />
             <CardHeader className="relative">
               <div className="flex items-center justify-between">

@@ -28,7 +28,7 @@ const Hero = () => {
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-20 left-10 text-primary/30"
         >
-          <Code2 className="h-12 w-12" />
+          <Code2 className="h-12 w-12 icon-float" />
         </motion.div>
         
         <motion.div
@@ -39,7 +39,7 @@ const Hero = () => {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="absolute top-40 right-20 text-accent/40"
         >
-          <Sparkles className="h-8 w-8" />
+          <Sparkles className="h-8 w-8 icon-pulse" />
         </motion.div>
 
         <motion.div
@@ -50,7 +50,7 @@ const Hero = () => {
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           className="absolute bottom-40 left-1/4 text-primary-glow/30"
         >
-          <div className="w-6 h-6 bg-accent/40 rounded-full" />
+          <div className="w-6 h-6 bg-accent/40 rounded-full icon-bounce" />
         </motion.div>
       </div>
 
@@ -68,7 +68,7 @@ const Hero = () => {
             className="mb-6"
           >
             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/20">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Sparkles className="w-4 h-4 mr-2 icon-pulse" />
               Welcome to CodeFlare
             </span>
           </motion.div>
