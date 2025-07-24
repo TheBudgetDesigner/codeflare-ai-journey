@@ -96,7 +96,7 @@ const Hero = () => {
             className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
             From failing at my first "Hello World" to building AI bots at 12. 
-            Join thousands of beginners learning to code through real stories, 
+            Join Us of If you want learn to code through real stories, 
             epic fails, and breakthrough moments.
           </motion.p>
 
