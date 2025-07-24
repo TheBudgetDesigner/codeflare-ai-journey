@@ -33,12 +33,12 @@ const Journey = () => {
                   <Calendar className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">2023 - The Beginning</h3>
-                  <p className="text-muted-foreground">Age 10: First "Hello World"</p>
+                  <h3 className="text-2xl font-bold">2020 - The Beginning</h3>
+                  <p className="text-muted-foreground">Age 7: First "Hello World"</p>
                 </div>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                It all started when I saw my older brother coding. I thought it was magic - typing words and making computers do things. 
+                It all started when I saw a youtube video about making a game. I thought it was magic - typing words and making computers make litteral games!. 
                 My first program took me 3 hours to write because I couldn't figure out why "print" wasn't working (I was using Java, not Python). 
                 The moment I finally saw "Hello World" appear on the screen, I was hooked.
               </p>
@@ -55,8 +55,8 @@ const Journey = () => {
                   <AlertTriangle className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">2024 - Epic Failures</h3>
-                  <p className="text-muted-foreground">Age 11: Learning Through Disasters</p>
+                  <h3 className="text-2xl font-bold">2021 - Epic Failures</h3>
+                  <p className="text-muted-foreground">Age 8: Learning Through Disasters</p>
                 </div>
               </div>
               <p className="text-muted-foreground leading-relaxed">
@@ -77,15 +77,13 @@ const Journey = () => {
                   <Code2 className="h-6 w-6 text-primary-glow" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">2024 - AI Discovery</h3>
-                  <p className="text-muted-foreground">Age 12: First AI Bot</p>
+                  <h3 className="text-2xl font-bold">2022 - Now - Discovered ChatGPT, and made My first fuctionnal Programs</h3>
+                  <p className="text-muted-foreground">Age 9: First AI Bot</p>
                 </div>
               </div>
               <p className="text-muted-foreground leading-relaxed">
                 Discovered ChatGPT and realized AI could help me code better. Built my first Discord bot that could 
-                answer questions about coding. It was basically a wrapper around AI APIs, but seeing people actually 
-                use it and find it helpful was incredible. This was my "aha" moment - AI isn't replacing programmers, 
-                it's making us superhuman.
+                answer questions about coding. It was basically a wrapper around AI APIs, Or even a Chess Bot that would play automaticly the best chess moves *() to troll my Friends. This was my "goofy-aha" moment.
               </p>
             </motion.div>
 
