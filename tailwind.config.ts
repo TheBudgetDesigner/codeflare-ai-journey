@@ -53,6 +53,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// CodeFlare themed colors
+				'tip-green': {
+					DEFAULT: 'hsl(var(--tip-green))',
+					foreground: 'hsl(var(--tip-green-foreground))'
+				},
+				'flop-red': {
+					DEFAULT: 'hsl(var(--flop-red))',
+					foreground: 'hsl(var(--flop-red-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,15 +76,19 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-accent': 'var(--gradient-accent)'
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-flop': 'var(--gradient-flop)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
+				'purple-glow': 'var(--shadow-purple-glow)',
 				'card-enhanced': 'var(--shadow-card)',
 				'elevated': 'var(--shadow-elevated)'
 			},
 			fontFamily: {
-				'mono': 'var(--font-mono)'
+				'mono': 'var(--font-mono)',
+				'display': 'var(--font-display)',
+				'body': 'var(--font-body)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

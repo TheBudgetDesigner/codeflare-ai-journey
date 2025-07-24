@@ -6,62 +6,74 @@
 
 @layer base {
   :root {
-    /* Core colors - Light mode (fallback) */
-    --background: 220 13% 18%;
-    --foreground: 220 9% 98%;
+    /* CodeFlare Theme - Jet Black Background (#0A0A0A) */
+    --background: 0 0% 4%;
+    --foreground: 220 13% 91%;
 
-    --card: 220 13% 16%;
-    --card-foreground: 220 9% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 220 13% 91%;
 
-    --popover: 220 13% 16%;
-    --popover-foreground: 220 9% 98%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 220 13% 91%;
 
-    /* Primary - Purple/Blue gradient inspired */
-    --primary: 260 70% 55%;
-    --primary-foreground: 220 9% 98%;
-    --primary-glow: 280 80% 65%;
+    /* Primary - Purple (#7C3AED) */
+    --primary: 262 83% 58%;
+    --primary-foreground: 220 13% 91%;
+    --primary-glow: 262 83% 65%;
 
-    /* Secondary - Complementary */
-    --secondary: 220 13% 22%;
-    --secondary-foreground: 220 9% 98%;
+    /* Secondary - Dark grays */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 220 13% 91%;
 
     /* Muted tones */
-    --muted: 220 13% 20%;
-    --muted-foreground: 220 9% 70%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 220 13% 65%;
 
-    /* Accent - Bright highlight */
-    --accent: 180 100% 50%;
-    --accent-foreground: 220 13% 18%;
+    /* Accent - Neon Blue (#38BDF8) */
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 4%;
+
+    /* Tip Green (#10B981) */
+    --tip-green: 158 64% 52%;
+    --tip-green-foreground: 0 0% 4%;
+
+    /* Flop Red (#F87171) */
+    --flop-red: 0 84% 60%;
+    --flop-red-foreground: 220 13% 91%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 220 9% 98%;
+    --destructive-foreground: 220 13% 91%;
 
-    --border: 220 13% 25%;
-    --input: 220 13% 22%;
-    --ring: 260 70% 55%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 262 83% 58%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(260 70% 55%), hsl(280 80% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(220 13% 18%), hsl(220 13% 22%));
-    --gradient-accent: linear-gradient(135deg, hsl(180 100% 50%), hsl(200 100% 60%));
+    /* Futuristic gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(199 89% 48%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(199 89% 48%), hsl(158 64% 52%));
+    --gradient-flop: linear-gradient(135deg, hsl(0 84% 60%), hsl(262 83% 58%));
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(260 70% 55% / 0.3);
-    --shadow-card: 0 8px 32px hsl(220 13% 10% / 0.4);
-    --shadow-elevated: 0 16px 64px hsl(220 13% 8% / 0.6);
+    /* Neon glow shadows */
+    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.3);
+    --shadow-purple-glow: 0 0 40px hsl(262 83% 58% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 4% / 0.5);
+    --shadow-elevated: 0 16px 64px hsl(0 0% 4% / 0.7);
 
-    /* Typography */
+    /* Typography - CodeFlare fonts */
     --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    --font-display: 'Poppins', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
     
-    /* Glassmorphism */
+    /* Enhanced glassmorphism */
     --glass-bg: hsl(var(--background) / 0.8);
-    --glass-border: hsl(var(--border) / 0.3);
+    --glass-border: hsl(var(--accent) / 0.2);
     --glass-backdrop: blur(20px) saturate(180%);
     
-    /* Shimmer effect */
-    --shimmer-bg: linear-gradient(110deg, transparent 25%, hsl(var(--primary) / 0.3) 50%, transparent 75%);
+    /* Neon shimmer effect */
+    --shimmer-bg: linear-gradient(110deg, transparent 25%, hsl(var(--accent) / 0.4) 50%, transparent 75%);
 
     --sidebar-background: 0 0% 98%;
 
