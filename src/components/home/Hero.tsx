@@ -95,12 +95,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            From failing at my first "Hello World" to building AI bots at 12. 
-            Join Us of If you want learn to code through real stories, 
-            epic fails, and breakthrough moments.
+            Coding isn’t clean. It’s bugs, breakdowns, and late snacks. I’m 12 — I build Apps, Websites, and sometimes Dreams. I still flop, crash, and Ctrl+Z my way through. But this blog? It’s where we grow, laugh, and learn to debug life.
           </motion.p>
 
-          <motion.div
+          <motion.d
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
