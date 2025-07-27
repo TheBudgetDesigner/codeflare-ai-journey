@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
+            <Link to="/" className="flex items-center space-x-2 group">
               <div className="relative">
                 <Code2 className="h-8 w-8 text-primary" />
                 <Zap className="h-4 w-4 text-accent absolute -top-1 -right-1" />
@@ -52,7 +52,7 @@ const Footer = () => {
                 <span className="text-xl font-bold gradient-text">CodeFlare</span>
                 <span className="text-sm text-muted-foreground ml-2">by Rayan</span>
               </div>
-            </div>
+            </Link>
             <p className="text-muted-foreground mb-6 max-w-md">
               Helping beginners learn to code, flop, and win with AI. 
               Join thousands of aspiring developers on their coding journey.
@@ -77,10 +77,11 @@ const Footer = () => {
               <h3 className="font-semibold text-foreground mb-4">{section.title}</h3>
               <ul className="space-y-2">
                 {section.links.map((link) => (
-                  <li key={link.name}>
+                  <li key={link.href}>
                     <Link
+                      key={link.href}
                       to={link.href}
-                      className="text-muted-foreground hover:text-accent transition-colors text-sm"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {link.name}
                     </Link>

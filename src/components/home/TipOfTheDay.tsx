@@ -103,7 +103,7 @@ const TipOfTheDay = () => {
     },
     {
       title: "Use Version Control Early",
-      content: "Git is not just for teams. Commit early, commit often — even for solo projects.",
+      content: "Git is not just for teams. Commit early, commit often, even for solo projects.",
       category: "Tools"
     },
     {
@@ -148,7 +148,7 @@ const TipOfTheDay = () => {
     },
     {
       title: "Read the Docs",
-      content: "Official documentation is more accurate than random blogs — and improves your understanding.",
+      content: "Official documentation is more accurate than random blogs, and improves your understanding.",
       category: "Research"
     },
     {

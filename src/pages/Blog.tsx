@@ -1,53 +1,30 @@
+import React, { useEffect, useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { getAllPosts, BlogPost } from '@/lib/blog';
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "How I Built My First AI Bot (And Why It Failed Spectacularly)",
-      description: "The complete story of my Discord bot project - from exciting idea to crashing reality, and what I learned from the wreckage.",
-      date: "2025-01-15",
-      readTime: "5 min read",
-      category: "AI",
-      slug: "first-ai-bot-failure",
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "10 Beginner Mistakes I Made (So You Don't Have To)",
-      description: "From forgetting semicolons to not reading error messages - here are the silly mistakes that taught me the most.",
-      date: "2025-01-10",
-      readTime: "3 min read",
-      category: "Learning",
-      slug: "beginner-mistakes",
-      featured: false,
-    },
-    {
-      id: 3,
-      title: "Why I Code at 12 (And Why Age Doesn't Matter)",
-      description: "Addressing the 'you're too young' comments and why starting early gave me a unique perspective on learning.",
-      date: "2025-01-05",
-      readTime: "4 min read",
-      category: "Personal",
-      slug: "coding-at-twelve",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "ChatGPT: My Coding Mentor That Never Gets Tired",
-      description: "How AI changed my learning process and became the patient teacher I always needed.",
-      date: "2024-12-28",
-      readTime: "6 min read",
-      category: "AI",
-      slug: "chatgpt-coding-mentor",
-      featured: false,
-    },
-  ];
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    getAllPosts().then(setPosts);
+  }, []);
+
+  if (!posts.length) {
+    return (
+      <Layout>
+        <div className="pt-20 text-center text-lg">Loading posts...</div>
+      </Layout>
+    );
+  }
+
+  const latestPost = posts[0];
+  const featuredPosts = posts.filter(post => post.featured);
+  const regularPosts = posts.filter(post => !post.featured);
 
   return (
     <Layout>
@@ -65,12 +42,18 @@ const Blog = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Real stories, honest experiences, and practical tips from my coding journey.
             </p>
+            {latestPost && (
+              <div className="mt-6">
+                <span className="text-lg font-semibold text-accent">Latest Post:</span>{' '}
+                <span className="text-lg font-bold">{latestPost.title}</span>
+              </div>
+            )}
           </motion.div>
 
           {/* Featured Post */}
-          {blogPosts.filter(post => post.featured).map((post, index) => (
+          {featuredPosts.map((post, index) => (
             <motion.div
-              key={post.id}
+              key={post.slug}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -97,9 +80,7 @@ const Blog = () => {
                       <CardTitle className="text-2xl sm:text-3xl mb-3 leading-tight">
                         {post.title}
                       </CardTitle>
-                      <CardDescription className="text-base text-muted-foreground leading-relaxed">
-                        {post.description}
-                      </CardDescription>
+                      {/* Optionally add excerpt/description here if you add it to frontmatter */}
                     </CardHeader>
                     <Link
                       to={`/posts/${post.slug}`}
@@ -116,9 +97,9 @@ const Blog = () => {
 
           {/* Regular Posts */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.filter(post => !post.featured).map((post, index) => (
+            {regularPosts.map((post, index) => (
               <motion.div
-                key={post.id}
+                key={post.slug}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
@@ -137,9 +118,7 @@ const Blog = () => {
                       <CardTitle className="text-lg leading-tight hover:text-accent transition-colors">
                         {post.title}
                       </CardTitle>
-                      <CardDescription className="line-clamp-3">
-                        {post.description}
-                      </CardDescription>
+                      {/* Optionally add excerpt/description here if you add it to frontmatter */}
                     </CardHeader>
                     <CardContent>
                       <div className="flex items-center text-sm text-accent">

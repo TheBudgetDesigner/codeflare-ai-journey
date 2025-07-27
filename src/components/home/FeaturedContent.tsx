@@ -86,15 +86,15 @@ const FeaturedContent = () => {
             >
               <Card className="glass-card hover:scale-105 transition-all duration-300 group cursor-pointer">
                 <Link to={card.link}>
-                  <CardHeader className="pb-3">
+                  <CardHeader>
                     <div className="flex items-center space-x-3 mb-2">
                       <div className={`p-2 rounded-lg bg-muted ${card.color}`}>
                         <card.icon className="h-5 w-5" />
                       </div>
+                      <CardTitle className="text-lg group-hover:text-accent transition-colors">
+                        {card.title}
+                      </CardTitle>
                     </div>
-                    <CardTitle className="text-lg group-hover:text-accent transition-colors">
-                      {card.title}
-                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-sm leading-relaxed mb-4">

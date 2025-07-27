@@ -11,6 +11,8 @@ export type BlogPost = {
   category: string;
   readTime: string;
   featured: boolean;
+  excerpt?: string;
+  tags?: string[];
   content: string; // HTML
 };
 
@@ -25,6 +27,8 @@ async function parseFrontmatter(raw: string, filePath: string): Promise<BlogPost
     category: attributes.category || '',
     readTime: attributes.readTime || '',
     featured: !!attributes.featured,
+    excerpt: attributes.excerpt,
+    tags: attributes.tags,
     content: processedContent,
   };
 }
@@ -37,4 +41,9 @@ export async function getAllPosts(): Promise<BlogPost[]> {
   }
   // Sort by date (latest first)
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  const allPosts = await getAllPosts();
+  return allPosts.find(post => post.slug === slug) || null;
 }

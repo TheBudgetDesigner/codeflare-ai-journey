@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { getSortedPostsData, PostMetadata } from '@/lib/posts';
 
 export default function BlogPage() {
@@ -43,7 +43,7 @@ export default function BlogPage() {
               key={post.slug}
               className="border-b pb-8 last:border-b-0 last:pb-0"
             >
-              <Link to={`/blog/${post.slug}`}>
+              <Link href={`/blog/${post.slug}`}>
                 <h2 className="text-2xl font-bold hover:text-primary transition-colors">
                   {post.title}
                 </h2>

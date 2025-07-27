@@ -1,48 +1,26 @@
-import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { notFound } from 'next/navigation';
 import { getPostData, getSortedPostsData } from '@/lib/posts';
 import { MarkdownRenderer } from '@/components/blog/MarkdownRenderer';
 
-export default function BlogPost() {
-  const { slug } = useParams<{ slug: string }>();
-  const navigate = useNavigate();
-  const [post, setPost] = useState<{
-    title: string;
-    date: string;
-    category: string;
-    readTime: string;
-    excerpt?: string;
-    content: string;
+interface BlogPostProps {
+  params: {
     slug: string;
-    featured?: boolean;
-  } | null>(null);
-  const [loading, setLoading] = useState(true);
+  };
+}
 
-  useEffect(() => {
-    const loadPost = async () => {
-      if (!slug) return;
-      
-      try {
-        setLoading(true);
-        const postData = await getPostData(slug);
-        setPost(postData);
-      } catch (error) {
-        console.error('Error loading post:', error);
-        navigate('/404');
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    loadPost();
-  }, [slug, navigate]);
-
-  if (loading) {
-    return <div className="container py-12 text-center">Loading...</div>;
+export default async function BlogPost({ params }: BlogPostProps) {
+  const { slug } = params;
+  let post;
+  
+  try {
+    post = await getPostData(slug);
+  } catch (error) {
+    console.error('Error loading post:', error);
+    notFound();
   }
 
   if (!post) {
-    return <div className="container py-12 text-center">Post not found</div>;
+    notFound();
   }
 
   return (

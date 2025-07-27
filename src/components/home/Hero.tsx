@@ -95,10 +95,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Coding isn’t clean. It’s bugs, breakdowns, and late snacks. I’m 12 — I build Apps, Websites, and sometimes Dreams. I still flop, crash, and Ctrl+Z my way through. But this blog? It’s where we grow, laugh, and learn to debug life.
+            Coding isn’t clean. It’s bugs, breakdowns, and late snacks. I’m 12, I build Apps, Websites, and sometimes Dreams. I still flop, crash, and Ctrl+Z my way through. But this blog? It’s where we grow, laugh, and learn to debug life.
           </motion.p>
 
-          <motion.d
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
@@ -110,7 +110,7 @@ const Hero = () => {
               className="group" 
               asChild
             >
-              <Link to="/journey">
+              <Link to="/subscribe">
                 Start My Journey
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
