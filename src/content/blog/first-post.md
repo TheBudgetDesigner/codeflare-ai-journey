@@ -1,10 +1,10 @@
 ---
-title: "How I Built My First AI Bot (And Why It Failed Spectacularly)"
+title: "My First Discord Bot Adventure"
 date: "2025-01-15"
 category: "AI"
 readTime: "5 min read"
-featured: False
-slug: "first-ai-bot-failure-test"
+featured: false
+slug: "first-discord-bot"
 ---
 
 The complete story of my Discord bot project - from exciting idea to crashing reality, and what I learned from the wreckage.

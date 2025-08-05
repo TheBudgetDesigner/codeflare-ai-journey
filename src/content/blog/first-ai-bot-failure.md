@@ -4,7 +4,7 @@ date: "2025-01-15"
 category: "AI"
 readTime: "5 min read"
 featured: true
-slug: "My-First-AI-Chatbot"
+slug: "first-ai-bot-failure"
 ---
 
 ## The Beginning of My AI Journey

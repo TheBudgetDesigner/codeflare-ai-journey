@@ -3,7 +3,7 @@ title: "How I Lost My Entire Project (Because I Ignored Git)"
 date: "2025-07-26"
 category: "Development"
 readTime: "3 min read"
-featured: False
+featured: false
 slug: "lost-project-no-git"
 ---
 

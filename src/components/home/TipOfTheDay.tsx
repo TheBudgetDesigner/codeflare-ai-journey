@@ -57,26 +57,6 @@ const TipOfTheDay = () => {
       category: "Learning"
     },
     {
-      title: "Fail Fast, Fix Faster",
-      content: "Don't fear breaking things. Every bug teaches more than a tutorial. Just make sure to debug smart and learn from each crash.",
-      category: "Mindset"
-    },
-    {
-      title: "Google Like a Pro",
-      content: "Learning to search effectively is a skill. Use specific error messages, add the language/framework name, and check Stack Overflow dates.",
-      category: "Research"
-    },
-    {
-      title: "Console is Your Friend",
-      content: "Use console.log strategically to trace values and understand flow before reaching for fancy debuggers.",
-      category: "Debugging"
-    },
-    {
-      title: "Don’t Memorize, Map",
-      content: "Instead of memorizing syntax, understand how things connect. Frameworks change, logic doesn’t.",
-      category: "Mindset"
-    },
-    {
       title: "Name Things Clearly",
       content: "Good variable and function names reduce bugs. If you have to comment what it does, rename it.",
       category: "Best Practices"

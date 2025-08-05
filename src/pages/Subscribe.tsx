@@ -167,6 +167,8 @@ const Subscribe = () => {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <div className="flex justify-between">
+                      <span className="text-muted-foreground">Subscribers</span>
+                      <span className="font-semibold text-accent">1,000+</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Open Rate</span>
